@@ -1,4 +1,14 @@
 
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
 body {
     filter: sepia(0%);
     display: flex;
@@ -9,9 +19,10 @@ body {
     text-align: center;
     animation: slidein 4s ease;
     font-size: 40px;
-
+ 
+    user-select: none;
 }
-/* @keyframes slidein {
+@keyframes slidein {
 0%  {
     margin-top: 100%;
     filter: blur(5px);
@@ -20,12 +31,12 @@ body {
     margin-top: 0%;
     filter: blur(0);
     }
-} */
+}
 
 .ref {
     display: inline-block;
     color: rgb(0, 0, 0); 
-    text-decoration-style: dashed;
+    text-decoration-style: dotted;
     text-decoration-color: rgba(0, 0, 0, 0.5);
     transform: none;
     transition: all 0.3s ease;
@@ -42,11 +53,98 @@ body {
 .audio {
     display: flex;
     width: 400px;
-    height: 50px;
+    height: 80px;
     justify-content: center;
+    margin-top: 20px;
+    margin: 20px auto 0;
     align-items: center;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    flex-direction: column;
+    font-size: 10px;
+    flex-wrap: nowrap;
+    border: 3px solid black;
+    position: relative;
+}
+
+.song_name {
+    display: inline;
+    float: none;
+    font-weight: 600;
+    position: absolute;
+    top: -10px;
+    left: 70px;
+    border: none;
+}
+.play {
+    display: bloc;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    left: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 3px solid black;
+}
+.song_bar {
+    display: block;
+    width: 300px;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    left: 70px;
+}
+.link {
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+}
+.song_time {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+    top: -5px;
+    left: -4px;
+    width: 304px;
+    background: transparent; 
+    border-radius: 10px;
+    height: 8px;
+    cursor: pointer;
+    
+}
+.song_time::-webkit-slider-runnable-track {
+    width: 304px;
+    height: 8px;
     border-radius: 10px;
 }
-    
+
+.song_time::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: black;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -4px;  
+}
+
+.current-time, .song-duration {
+    font-size: 19px;
+    position: absolute;
+    top: 10px;
+    font-weight: 600;
+}
+
+.song-duration {
+    right: 0;
+}
+.current-time {
+    left: 0;
+}
+
+.play.playing {
+    background: black;
+}
+
+
+
         
