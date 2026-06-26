@@ -10,6 +10,7 @@ html {
 }
 
 body {
+    background-color: white;
     filter: sepia(0%);
     display: flex;
     flex-direction: column;
@@ -22,7 +23,7 @@ body {
  
     user-select: none;
 }
-@keyframes slidein {
+/* @keyframes slidein {
 0%  {
     margin-top: 100%;
     filter: blur(5px);
@@ -31,7 +32,7 @@ body {
     margin-top: 0%;
     filter: blur(0);
     }
-}
+} */
 
 .ref {
     display: inline-block;
@@ -76,7 +77,7 @@ body {
     border: none;
 }
 .play {
-    display: bloc;
+    display: block;
     width: 45px;
     height: 45px;
     position: absolute;
@@ -143,6 +144,32 @@ body {
 
 .play.playing {
     background: black;
+}
+
+#themeButton {
+    display: block;
+    width: 65px;
+    height: 65px;
+    position: relative;
+    left: 10px;
+    top: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 3px solid black;
+    font-size: 22px;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0);
+    justify-content: center;
+    z-index: 2;
+}
+#themeText {
+    display: flex;
+    position: relative;
+    left: 17.5px;
+    top: -52.5px;
+    font-size: 18px;
+    font-weight: 600;
+    z-index: 1;
 }
 
 
