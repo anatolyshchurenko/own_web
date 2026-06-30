@@ -25,7 +25,7 @@ body {
 .anim {
     animation: slidein 4s ease;
 }
-@keyframes slidein {
+/* @keyframes slidein {
 0%  {
     margin-top: 100%;
     filter: blur(5px);
@@ -34,7 +34,7 @@ body {
     margin-top: 0%;
     filter: blur(0);
     }
-}
+} */
 @keyframes opacity {
 0%  {
     opacity: 0;
@@ -42,6 +42,14 @@ body {
 100%{
     opacity: 1;
     }   
+}
+@keyframes copy {
+    0%  {
+    opacity: 0.5;
+    }
+100%{
+    opacity: 0;
+    }  
 }
 
 .ref {
@@ -182,6 +190,19 @@ body {
     font-weight: 600;
     z-index: 1;
     animation: opacity 4s ease;
+}
+.copy:hover{
+    cursor: pointer;
+}
+.copyText {
+    opacity: 0;
+}
+.copyTextAnimate {
+    animation: copy 2s ease forwards;
+  }
+.copyDiv{
+    position: relative;
+    left: 140px;
 }
 
 
